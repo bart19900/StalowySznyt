@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Moja strona</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {
+font-family: Arial;
+margin: 0;
+background: #Of172a;
+color: white;
+text-align: center;
+ }
+
+.container {
+padding: 80px 20px;
+}
+
+hl {
+font-size: 48px;
+}
+
+p {
+font-size: 20px;
+color: #94a3b8;
+}
+
+.btn {
+background: #3b82f6;
+color: white;
+padding: 15px 25px;
+display: inline-block;
+border-radius: 8px;
+margin-top: 20px;
+text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Witaj na mojej stronie </h1>
+<p>Strona działa na Twojej własnej domenie</p>
+#Kontakt</a>
+</div>
+</body>
+</html>
