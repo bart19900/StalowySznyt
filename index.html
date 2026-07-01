@@ -2,49 +2,291 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Moja strona</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stalowy Sznyt</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body {
-font-family: Arial;
-margin: 0;
-background: #Of172a;
-color: white;
-text-align: center;
- }
-
-.container {
-padding: 80px 20px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-hl {
-font-size: 48px;
+body{
+background:#111;
+color:white;
 }
 
-p {
-font-size: 20px;
-color: #94a3b8;
+/* MENU */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+background:#1b1b1b;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 60px;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
 }
 
-.btn {
-background: #3b82f6;
-color: white;
-padding: 15px 25px;
-display: inline-block;
-border-radius: 8px;
-margin-top: 20px;
-text-decoration: none;
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:10px;
+}
+
+.logo h1{
+font-size:28px;
+font-weight:700;
+color:#ff5e00;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff5e00;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80") center center/cover;
+position:relative;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+}
+
+.hero h2{
+font-size:70px;
+margin-bottom:20px;
+color:#ff5e00;
+}
+
+.hero p{
+font-size:24px;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+padding:100px 0;
+background:#181818;
+overflow:hidden;
+}
+
+.portfolio h2{
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+}
+
+.slider{
+
+overflow:hidden;
+white-space:nowrap;
+
+}
+
+.slide-track{
+
+display:inline-flex;
+
+animation:scroll 30s linear infinite;
+
+}
+
+.slide{
+
+margin:0 15px;
+
+}
+
+.slide img{
+
+width:420px;
+height:260px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+cursor:pointer;
+}
+
+.slide img:hover{
+
+transform:scale(1.05);
+
+}
+
+@keyframes scroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+/* STOPKA */
+
+footer{
+
+padding:40px;
+text-align:center;
+background:#111;
+
 }
 
 </style>
+
 </head>
 <body>
-<div class="container">
-<h1>Witaj na mojej stronie Bartlomieju </h1>
-<p>Strona działa na Twojej własnej domenie. test zdany</p>
-#Kontakt</a>
+
+<header>
+
+<div class="logo">
+
+<img src="logo.png">
+
+<h1>Stalowy Sznyt</h1>
+
 </div>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#">Oferta</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">O nas</a></li>
+<li><a href="#">Kontakt</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Tworzymy konstrukcje ze stali</h2>
+
+<p>Projektowanie • Spawanie • Obróbka • Modelowanie 3D CAD</p>
+
+</div>
+
+</section>
+
+<section class="portfolio">
+
+<h2>Nasze realizacje</h2>
+
+<div class="slider">
+
+<div class="slide-track">
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<!-- Powtórzenie dla płynnego przewijania -->
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Stalowy Sznyt | Konstrukcje stalowe | Projektowanie CAD | Spawanie
+
+</footer>
+
 </body>
 </html>
