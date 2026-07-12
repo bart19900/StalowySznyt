@@ -1,8 +1,9 @@
 {
   "title": "Kwietnik pionowy 4-piętrowy",
   "category": "Kwietniki",
-  "description": "Projekt złożeniowy z Inventora. Zdjęcia i rendery zostaną dodane później.",
+  "description": "Pionowy kwietnik o czterech poziomach.",
   "featured": false,
   "order": 4,
-  "status": "draft"
+  "status": "published",
+  "model": "models/kwietnik-pionowy-4-pietrowy/kwietnik-pionowy-4-pietrowy.glb"
 }

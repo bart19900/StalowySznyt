@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.3.1/dist/model-viewer.min.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/gallery.css">
 </head>
@@ -135,6 +137,42 @@
       </figcaption>
     </figure>
     <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Następne zdjęcie">›</button>
+  </div>
+
+
+  <div class="model-modal" id="modelModal" aria-hidden="true">
+    <div class="model-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modelModalTitle">
+      <div class="model-modal-header">
+        <div>
+          <p class="eyebrow">Interaktywny podgląd</p>
+          <h2 id="modelModalTitle">Model 3D</h2>
+          <p>Przeciągnij, aby obrócić. Użyj kółka myszy lub gestu, aby przybliżyć.</p>
+        </div>
+        <button class="model-modal-close" id="modelModalClose" type="button" aria-label="Zamknij model 3D">×</button>
+      </div>
+
+      <model-viewer
+        id="productModelViewer"
+        alt="Model 3D produktu Stalowy Sznyt"
+        camera-controls
+        auto-rotate
+        auto-rotate-delay="1200"
+        rotation-per-second="18deg"
+        shadow-intensity="1"
+        shadow-softness="0.8"
+        environment-image="neutral"
+        exposure="1"
+        touch-action="pan-y"
+        interaction-prompt="auto">
+        <div class="model-progress" slot="progress-bar">
+          <div class="model-progress-bar" id="modelProgressBar"></div>
+        </div>
+      </model-viewer>
+
+      <p class="model-error" id="modelError" hidden>
+        Nie udało się wczytać modelu. Sprawdź nazwę i ścieżkę pliku GLB.
+      </p>
+    </div>
   </div>
 
   <script src="js/main.js"></script>

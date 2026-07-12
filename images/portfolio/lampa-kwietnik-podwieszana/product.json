@@ -4,5 +4,6 @@
   "description": "Podwieszana konstrukcja z czarnej stali i drewna, z oświetleniem punktowym oraz miejscem na rośliny.",
   "featured": true,
   "order": 1,
-  "status": "published"
+  "status": "published",
+  "model": "models/lampa-kwietnik/lampa-kwietnik.glb"
 }

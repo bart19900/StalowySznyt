@@ -1,8 +1,9 @@
 {
   "title": "Stolik kawowy",
   "category": "Meble",
-  "description": "Projekt złożeniowy z Inventora. Zdjęcia i rendery zostaną dodane później.",
+  "description": "Loftowy stolik kawowy zaprojektowany w Autodesk Inventor.",
   "featured": false,
   "order": 2,
-  "status": "draft"
+  "status": "published",
+  "model": "models/stolik-kawowy/stolik-kawowy.glb"
 }
