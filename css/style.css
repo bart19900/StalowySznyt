@@ -219,3 +219,33 @@ footer{
   .collection-card{min-height:220px}
   footer{flex-direction:column}
 }
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  margin: 22px 0 28px;
+}
+
+.contact-details span {
+  color: var(--muted);
+
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-details a {
+  color: var(--wood-light);
+
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.contact-details a:hover {
+  color: var(--text);
+}
