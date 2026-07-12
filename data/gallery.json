@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "lampa-kwietnik-podwieszana",
+    "title": "Lampa–kwietnik podwieszana",
+    "category": "Lampy i kwietniki",
+    "description": "Podwieszana konstrukcja z czarnej stali i drewna, z oświetleniem punktowym oraz miejscem na rośliny.",
+    "featured": true,
+    "order": 1,
+    "cover": "images/portfolio/lampa-kwietnik-podwieszana/01-detal.webp",
+    "images": [
+      "images/portfolio/lampa-kwietnik-podwieszana/01-detal.webp",
+      "images/portfolio/lampa-kwietnik-podwieszana/02-widok-kuchni.webp",
+      "images/portfolio/lampa-kwietnik-podwieszana/03-z-roslinami.webp"
+    ]
+  }
+]

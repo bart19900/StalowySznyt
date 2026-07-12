@@ -1,0 +1,221 @@
+
+:root{
+  --bg:#0f0f10;
+  --surface:#171719;
+  --surface-2:#202023;
+  --text:#f3f0ea;
+  --muted:#aaa59c;
+  --wood:#c69a63;
+  --wood-light:#ddb985;
+  --line:rgba(255,255,255,.10);
+  --glass:rgba(18,18,20,.62);
+  --serif:"Cormorant Garamond",serif;
+  --sans:"Poppins",sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+body.no-scroll{overflow:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+code{color:var(--wood-light)}
+
+.site-header{
+  position:fixed;
+  z-index:1000;
+  top:20px;
+  left:50%;
+  width:min(1180px,calc(100% - 32px));
+  min-height:74px;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 18px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:var(--glass);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  box-shadow:0 18px 55px rgba(0,0,0,.28);
+  transition:.35s ease;
+}
+.site-header.scrolled{
+  top:10px;
+  min-height:64px;
+  background:rgba(14,14,15,.86);
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+.brand-mark{
+  width:44px;height:44px;
+  display:grid;place-items:center;
+  border:1px solid rgba(198,154,99,.65);
+  color:var(--wood-light);
+  font-family:var(--serif);
+  font-weight:700;
+  letter-spacing:.06em;
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text strong{font-family:var(--serif);font-size:1.35rem}
+.brand-text small{margin-top:5px;color:var(--muted);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase}
+
+.main-nav{display:flex;gap:28px}
+.main-nav a{
+  position:relative;
+  text-decoration:none;
+  font-size:.9rem;
+  color:#ddd9d1;
+}
+.main-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;bottom:-8px;
+  width:100%;height:1px;
+  background:var(--wood);
+  transform:scaleX(0);
+  transform-origin:right;
+  transition:transform .3s ease;
+}
+.main-nav a:hover::after{transform:scaleX(1);transform-origin:left}
+
+.menu-toggle{
+  display:none;
+  width:46px;height:42px;
+  border:0;background:transparent;
+}
+.menu-toggle span{display:block;width:24px;height:1px;background:var(--text);margin:6px auto}
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:grid;
+  place-items:center;
+  padding:130px 24px 70px;
+  background:
+    url("../images/portfolio/lampa-kwietnik-podwieszana/02-widok-kuchni.webp")
+    center/cover no-repeat;
+}
+.hero-shade{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.74)),
+    radial-gradient(circle at 50% 40%,transparent 0,rgba(0,0,0,.36) 70%);
+}
+.hero-content{position:relative;z-index:1;text-align:center;max-width:900px}
+.eyebrow{
+  margin:0 0 12px;
+  color:var(--wood-light);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:.74rem;
+  font-weight:500;
+}
+h1,h2,h3{font-family:var(--serif);line-height:1.05}
+h1{font-size:clamp(4rem,10vw,8.2rem);margin:0}
+h2{font-size:clamp(3rem,7vw,5.4rem);margin:0 0 20px}
+.hero-lead{max-width:680px;margin:18px auto 0;color:#dedbd5;font-size:clamp(1rem,2vw,1.2rem)}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}
+.button{
+  min-height:50px;
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:0 24px;
+  border:1px solid transparent;
+  text-decoration:none;
+  font-size:.85rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:.3s ease;
+}
+.button-primary{background:var(--wood);color:#16120d}
+.button-primary:hover{background:var(--wood-light);transform:translateY(-2px)}
+.button-ghost{border-color:rgba(255,255,255,.4);background:rgba(0,0,0,.15)}
+.button-ghost:hover{border-color:var(--wood);color:var(--wood-light)}
+.scroll-hint{
+  position:absolute;z-index:2;bottom:25px;left:50%;
+  transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  text-decoration:none;color:#ddd7cf;font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;
+}
+.scroll-hint i{display:block;width:1px;height:42px;background:linear-gradient(var(--wood),transparent);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:.35;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+
+.section{padding:120px max(24px,7vw)}
+.section-dark{background:var(--surface)}
+.section-heading{max-width:780px;margin-bottom:52px}
+.section-heading>p:last-child{color:var(--muted);max-width:680px}
+.collection-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.collection-card{
+  min-height:300px;
+  padding:28px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01));
+  border:1px solid var(--line);
+  transition:.35s ease;
+}
+.collection-card:hover{transform:translateY(-7px);border-color:rgba(198,154,99,.6);background:var(--surface-2)}
+.collection-card span{color:var(--wood);font-size:.8rem}
+.collection-card h3{font-size:2rem;margin:22px 0 8px}
+.collection-card p{color:var(--muted);font-size:.9rem;margin:0}
+
+.studio{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.studio-copy p:last-child{color:var(--muted);max-width:620px}
+.process-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.process-list li{display:flex;gap:25px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.process-list span{color:var(--wood);font-size:.8rem}
+
+.contact{padding-top:70px}
+.contact-card{
+  min-height:380px;
+  padding:clamp(32px,7vw,80px);
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  background:linear-gradient(135deg,#1e1c19,#111112);
+  border:1px solid var(--line);
+}
+.contact-card p:not(.eyebrow){max-width:660px;color:var(--muted)}
+.contact-card .button{margin-top:16px}
+
+footer{
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  padding:28px max(24px,7vw);
+  border-top:1px solid var(--line);
+  color:var(--muted);font-size:.82rem;
+}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:950px){
+  .collection-grid{grid-template-columns:repeat(2,1fr)}
+  .studio{grid-template-columns:1fr;gap:40px}
+  .menu-toggle{display:block}
+  .main-nav{
+    position:absolute;top:calc(100% + 10px);left:0;right:0;
+    display:none;flex-direction:column;gap:0;
+    padding:10px;background:rgba(14,14,15,.96);
+    border:1px solid var(--line);border-radius:16px;
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:14px}
+}
+@media(max-width:600px){
+  .site-header{top:10px;width:calc(100% - 20px)}
+  .brand-text small{display:none}
+  .hero{background-position:60% center}
+  .collection-grid{grid-template-columns:1fr}
+  .collection-card{min-height:220px}
+  footer{flex-direction:column}
+}
